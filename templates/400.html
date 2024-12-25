@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+   <html lang="es">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Mantenimiento API</title>
+   </head>
+
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+<link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+   <body>
+    <header class="p-3 text-white"
+    style="background-color: #0e8b14; position: fixed; top: 0; left: 0; right: 0; width: 100%;">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center">
+            <a class="nav-link px-2" href="/api/Instrumentos/" style="color: white; text-decoration: none;">API</a>
+            <a class="nav-link px-2" href="{% url 'documentacion' %}" style="color: white; text-decoration: none;">Documentacion</a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %} " class="nav-link px-2 text-white">Cerrar sesion</a>
+            {% endif %}
+        </div>
+    </div>
+</header>
+       <div class="image-container">
+        <center>
+            <br>     <br>     <br>
+
+
+            <h1 class="responsive-h1">Lamentamos las molestias.</h1>
+            <h1 class="responsive-h1">Este sitio web se encuentra en mantenimiento</h1>
+            <h1 class="responsive-h1">Pronto estara disponible nuevamente</h1>
+          
+
+            <BR>
+            <a  class="btn btn-primary" href="{% url 'inicio' %}">Ir a Inicio</a>
+            <BR>
+            <img class="activator img-fluid custom-size" src="{% static 'imagenes/mantenimiento.png' %}">
+        </center>
+    </div>
+
+    <footer>
+        <header class="p-3"
+            style="background-color: #0e8b14; position: fixed; bottom: 0; left: 0; right: 0; width: 100%; color:white">
+            <center><a>Copyright &copy; jesusmedina0921@gmail.com <br> Todos los derechos reservados.</a></center>
+        </header>
+    </footer>
+
+
+
+    <style>
+           .p-3 {
+            padding: 1.0rem !important;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+ .responsive-h1 {
+            font-size: 2.5rem;
+            /* Tamaño de fuente por defecto */
+        }
+
+        .custom-size {
+        width: 600px;
+        height: 400px;
+        }
+        .nav-link:hover {
+            background: #7d13a7;
+        }
+
+        @media (max-width: 576px) {
+
+            /* Para dispositivos pequeños */
+            .activator {
+                width: 100%;
+                /* Cambia el tamaño a 100% en pantallas pequeñas */
+                height: auto;
+                /* Mantiene la proporción de la imagen */
+            }
+            .responsive-h1 {
+                font-size: 1.0rem;
+                /* Reduce el tamaño de la fuente en pantallas pequeñas */
+                text-align: center;
+                /* Centra el texto en pantallas pequeñas */
+            }
+        }
+
+    </style>
+   </body>
+
+   </html>

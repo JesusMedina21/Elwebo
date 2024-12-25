@@ -1,0 +1,110 @@
+{% load static %}
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+<link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+<meta charset="UTF-8">
+<title>API el Sistema</title>
+
+<header class="p-3 text-white"
+    style="background-color: #0e8b14; position: fixed; top: 0; left: 0; right: 0; width: 100%;">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center">
+            <a class="nav-link px-2" href="/api/Instrumentos/" style="color: white; text-decoration: none;">API</a>
+            <a class="nav-link px-2" href="{% url 'documentacion' %}" style="color: white; text-decoration: none;">Documentacion</a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %} " class="nav-link px-2 text-white">Cerrar sesion</a>
+            {% endif %}
+        </div>
+    </div>
+</header>
+<main class="main">
+    <br><br><br>
+    <div class="container">
+        <div class="card__item">
+            <center>
+                <h1>
+                    ¡Bienvenido a la Web de la API para el Sistema Nacional de Orquestas y Coros Infantiles y Juveniles
+                    de Venezuela!
+                </h1>
+                <br>
+                <img class="activator img-fluid active" src="{% static 'imagenes/portada.jpeg' %}" width="50%"
+                    height="50%" />
+            </center>
+        </div>
+    </div>
+    <section class="about container">
+        <div class="about__course">
+            <BR>
+            <center>
+                <h2>¿De que se trata este API?</h2>
+            </center>
+
+            <BR>
+            <div class="container">
+                <div class="card__item">
+                    <br>
+                    <center>
+                        <h5>
+
+                            Esta  API tiene como proposito proporcionar informacion
+                            sobre los Instrumentos Musicales impartidos por los Formadores en 
+                            El Sistema Nacional de Orquestas y Coros Infantiles y Juveniles de Venezuela.
+                            Facilitando Informacion como la gran variedad de Instrumentos y tipos de familias a la que
+                            pertenecen los Instrumentos Musicales de dicha Institucion.
+                            <br><br>
+                            Espero que esta API sea de util gran utilidad para los programadores y la aprovechen al maximo posible.
+
+
+                        </h5>
+
+                        <br>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<br>
+<footer>
+    <header class="p-3"
+        style="background-color: #0e8b14; position: fixed; bottom: 0; left: 0; right: 0; width: 100%; color:white">
+        <center><a>Copyright &copy; jesusmedina0921@gmail.com <br> Todos los derechos reservados.</a></center>
+    </header>
+</footer>
+
+
+
+<br><br><br>
+<style>
+    .p-3 {
+        padding: 1.0rem !important;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .custom-size {
+        width: 700px;
+        height: 470px;
+    }
+
+    .nav-link:hover {
+        background: #7d13a7;
+    }
+
+    @media (max-width: 576px) {
+
+        /* Para dispositivos pequeños */
+        .activator {
+            width: 100%;
+            /* Cambia el tamaño a 100% en pantallas pequeñas */
+            height: auto;
+            /* Mantiene la proporción de la imagen */
+        }
+    }
+</style>
+{% endblock %}

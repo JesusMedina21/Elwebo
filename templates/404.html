@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento API</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <style>
+        .p-3 {
+            padding: 1.0rem !important;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .custom-size {
+            width: 600px;
+            height: 400px;
+        }
+        .nav-link:hover {
+            background: #7d13a7;
+        }
+        @media (max-width: 576px) {
+            .activator {
+                width: 100%;
+                height: auto;
+            }
+        }
+        /* Estilo para el h1 */
+        h1 {
+            word-wrap: break-word; /* Permite que las palabras largas se dividan */
+            overflow-wrap: break-word; /* Alternativa más moderna */
+            white-space: normal; /* Permite que el texto se ajuste a múltiples líneas */
+            margin: 0; /* Elimina márgenes para mejor ajuste */
+        }
+    </style>
+</head>
+<body>
+    <header class="p-3 text-white"
+    style="background-color: #0e8b14; position: fixed; top: 0; left: 0; right: 0; width: 100%;">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
+            </div>
+        </div>
+    </header>
+    <div class="container text-center texto" style="margin-top: 100px;"> <!-- Añadido margen superior para evitar que el contenido quede detrás del header fijo -->
+        <h1>Error, la pagina: </h1>
+        <h1>https://api01.pythonanywhere.com{{ request_path }} no existe.</h1>
+    </div>
+    <div class="image-container text-center">
+        <img class="activator img-fluid custom-size" src="{% static 'imagenes/mantenimiento.png' %}">
+      
+    </div>
+    <br>  <br>  <br>  <br>  
+    <footer>
+        <header class="p-3"
+            style="background-color: #0e8b14; color:white">
+            <center><a>Copyright &copy; jesusmedina0921@gmail.com <br> Todos los derechos reservados.</a></center>
+        </header>
+    </footer>
+</body>
+</html>

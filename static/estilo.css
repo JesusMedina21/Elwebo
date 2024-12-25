@@ -1,0 +1,32 @@
+.enlace-sin-subrayado {
+    text-decoration: none; /* Quita el subrayado */
+    font-size: 20px; /* Tamaño del texto */
+    color: rgb(255, 255, 255); /* Color del texto */
+    padding: 10px 70px;
+    transition: color 0.3s, font-size 0.3s; /* Transición suave para el efecto hover */
+}
+
+.enlace-sin-subrayado:hover {
+    text-decoration: none;
+    height: 10%; /* Set height to 100% of viewport height */
+    background-color: rgb(138, 138, 138); /* Cambia el color al pasar el mouse */;
+    color: rgb(255, 255, 255); /* Cambia el color al pasar el mouse */
+    font-size: 20px; /* Aumenta el tamaño del texto al pasar el mouse */
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.docs-content .meta .label {
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.docs-content .meta code {
+    vertical-align: middle;
+    padding: .2em .6em .3em;
+    font-size: 14px;
+}
+

@@ -1,0 +1,178 @@
+{% load static %}
+{% block content %}
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentacion</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'estilo.css' %}">
+
+ 
+</head>
+<body>
+  <div class="container" id="main">
+    <header class="p-3 text-white"
+    style="background-color: #0e8b14; position: fixed; top: 0; left: 0; right: 0; width: 100%;">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center">
+
+            <a class="nav-link px-2" href="/api/Instrumentos/" style="color: white; text-decoration: none;">API</a>
+
+            <a class="nav-link px-2" href="{% url 'inicio' %}" style="color: white; text-decoration: none;">Inicio</a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %} " class="nav-link px-2 text-white">Cerrar sesion</a>
+            {% endif %}
+        </div>
+    </div>
+</header>
+  
+        <div class="text-center">
+            <br>  <br> <br>
+          <h1>Documentacion de la API del Sistema Nacional de Orquestas y Coros Infantiles y Juveniles de Venezuela</h1>
+        </div>
+       
+          <div class="docs-content col-12">
+            <h3 id="Instrumentos-list" class="coredocs-link-title"> 
+                <br>
+              Metodo GET para consumir la API (obviamente cualquier persona puede usar este metodo)
+              <a><i class="fa fa-link" aria-hidden="true"></i></a>
+            </h3>
+            <br>
+            <div class="meta">
+                <a class="btn btn-primary">GET</a>
+              <code>https://api01.pythonanywhere.com/api/Instrumentos/</code>
+            </div>
+          </div>
+    
+          <br>
+          <div class="docs-content col-12">
+            <h3 id="Instrumentos-create" class="coredocs-link-title">METODO POST para agregar mas Instrumentos (solo un
+              administrador puede usar este metodo) <a><i class="fa fa-link" aria-hidden="true"></i>
+              </a></h3>
+            <div class="meta">
+                <br>
+                <a class="btn btn-primary">POST</a>
+              <code>https://api01.pythonanywhere.com/api/Instrumentos/</code>
+            </div>
+            <br>
+            <h4>Campos obligatorios</h4>
+            <div class="table-responsive">
+              <table class="parameters table table-bordered table-striped">
+                <tr>
+                  <td class="parameter-name"><code>Nombre_Del_Instrumento</code>   <a class="btn btn-warning">Requerido</a></td>
+                </tr>
+                <tr>
+                  <td class="parameter-name"><code>Familia_Del_Instrumento</code>   <a class="btn btn-warning">Requerido</a></td>
+                </tr>
+                <tr>
+                  <td class="parameter-name"><code>Foto</code>  <a class="btn btn-warning">Requerido</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <br>
+
+          <div class="docs-content col-12">
+            <h3 id="Instrumentos-update" class="coredocs-link-title">Metodo PUT para actualizar un Instrumento (solo un
+              administrador puede usar este metodo) <a><i class="fa fa-link" aria-hidden="true"></i>
+              </a></h3>
+            <div class="meta">
+                <br>
+                <a class="btn btn-primary">PUT</a>
+              <code>https://api01.pythonanywhere.com/api/Instrumentos/{id}/</code>
+            </div>
+            <br>
+            <h4>Campos obligatorios</h4>
+            <div class="table-responsive">
+              <table class="parameters table table-bordered table-striped">
+                <tr>
+                  <td class="parameter-name"><code>Nombre_Del_Instrumento</code>   <a class="btn btn-warning">Requerido</a></td>
+                </tr>
+                <tr>
+                  <td class="parameter-name"><code>Familia_Del_Instrumento</code>   <a class="btn btn-warning">Requerido</a></td>
+                </tr>
+                <tr>
+                  <td class="parameter-name"><code>Foto</code>  <a class="btn btn-warning">Requerido</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="docs-content col-12">
+            <h3 id="Instrumentos-delete" class="coredocs-link-title">
+              Metodo DELETE para eliminar un Instrumento (solo un administrador puede usar este metodo)<a><i
+                  class="fa fa-link" aria-hidden="true"></i>
+              </a></h3>
+            <div class="meta">
+                <br>
+                <a class="btn btn-danger">DELETE</a>
+              <code>https://api01.pythonanywhere.com/api/Instrumentos/{id}/</code>
+            </div>
+            <br>
+            <h4>Campo Obligatorio</h4>
+            <div class="table-responsive">
+              <table class="parameters table table-bordered table-striped">
+                <tbody>
+                  <tr>
+                    <td class="parameter-name"><code>id</code>  <a class="btn btn-warning">Requerido</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+    <br> <br> <br>  <br> <br>
+          <footer>
+            <header class="p-3"
+                style="background-color: #0e8b14; position: fixed; bottom: 0; left: 0; right: 0; width: 100%; color:white">
+                <center><a>Copyright &copy; jesusmedina0921@gmail.com <br> Todos los derechos reservados.</a></center>
+            </header>
+        </footer>
+        
+        
+        
+        <style>
+               .p-3 {
+                padding: 1.0rem !important;
+            }
+        
+            footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+        
+        
+            .custom-size {
+            width: 600px;
+            height: 400px;
+            }
+            .nav-link:hover {
+                background: #7d13a7;
+            }
+        
+            @media (max-width: 576px) {
+        
+                /* Para dispositivos pequeños */
+                .activator {
+                    width: 100%;
+                    /* Cambia el tamaño a 100% en pantallas pequeñas */
+                    height: auto;
+                    /* Mantiene la proporción de la imagen */
+                }
+            }
+            
+        </style>
+
+  </div>
+</body>
+</html>
+{% endblock %}
