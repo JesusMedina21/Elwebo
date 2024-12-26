@@ -5,26 +5,12 @@
 sitio: www.api01.pythonanywhere.com 
 
  Para instalar el proyecto necesitas instalar python
-
-y luego ejecutar el siguiente comando si estas en Linux
-
-source venv/bin/activate
-
-
-
-si estas en Windows 
-
-.\venv\Scripts\activate
  
-Y despues necesitas ejecutar los siguientes comandos
+Y despues necesitas ejecutar los siguientes comandos:
 
 pip install -r requirements.txt
 
-si en linux genera algun error ejecutar el siguiente comando 
-
-sudo apt-get install python3-dev default-libmysqlclient-dev pkg-config
-
-comando para correr el proyecto 
+comando para correr el proyecto ejecutar el comando:
 
 python manage.py runserver
 
